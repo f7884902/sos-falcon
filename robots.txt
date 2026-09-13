@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://f7884902.github.io/sos-falcon/sitemap.xml
