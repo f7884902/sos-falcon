@@ -133,7 +133,7 @@ export function Admin() {
     setDraft((prev) => {
       const next = structuredClone(prev)
       next.gallery.push({
-        image: '/images/placeholder.svg',
+        image: 'images/placeholder.svg',
         alt: 'Nova imagem da galeria',
         caption: 'Nova imagem',
       })
