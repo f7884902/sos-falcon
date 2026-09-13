@@ -99,7 +99,7 @@ Elas são referenciadas em `src/data/siteContent.js` por caminho, por exemplo:
 
 ```js
 hero: {
-  image: 'images/hero.svg',
+  image: 'images/hero.jpg',
 }
 ```
 
@@ -112,12 +112,14 @@ Para trocar uma imagem:
 
 1. Coloque o arquivo definitivo (JPG, PNG ou WebP) dentro de `public/images/`.
 2. Atualize o caminho correspondente em `siteContent.js` (pode manter o nome
-   `hero.svg` → `hero.jpg`, por exemplo, ou usar um novo nome de arquivo).
+   `hero.jpg`, por exemplo, ou usar um novo nome de arquivo).
 
-Todas as imagens atuais são **placeholders identificados** — cada uma tem o
-texto "IMAGEM PLACEHOLDER" e uma legenda indicando o que deve entrar ali (ex.:
-"Hero — gavião em campo ao entardecer"). Substitua-as pelas fotografias reais
-antes de publicar definitivamente.
+As imagens atuais já são as fotografias reais fornecidas para o projeto
+(gavião-de-Harris em campo, galpões, linha de produção e trabalho em altura),
+redimensionadas e comprimidas para um tamanho adequado à web. O único
+placeholder que ainda existe é `public/images/placeholder.svg`, usado como
+imagem padrão apenas quando uma nova foto é adicionada à galeria pelo painel
+`/admin` (seção 7) antes de o arquivo definitivo ser enviado.
 
 > Por que `public/images/` e não `src/assets/images/`? Arquivos dentro de
 > `public/` são copiados exatamente como estão para a pasta `dist/` durante o

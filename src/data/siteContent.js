@@ -2,17 +2,18 @@
 // pode editar textos, imagens e dados de contato aqui, sem tocar nos
 // componentes React. Veja o README para instruções completas.
 //
-// Caminhos de imagem apontam para public/images/*.svg — são placeholders
-// identificados. Substitua pelos arquivos reais mantendo o mesmo nome, ou
-// aponte para um novo arquivo dentro dessa mesma pasta (public/images/).
-// Arquivos em public/ são copiados como estão para o build final, por
-// isso as imagens do conteúdo ficam lá e não em src/.
+// Caminhos de imagem apontam para public/images/*.jpg — já usam as fotos
+// reais fornecidas pelo cliente. Para trocar uma imagem, basta substituir o
+// arquivo em public/images/ mantendo o mesmo nome (ou apontar para um novo
+// arquivo dentro dessa mesma pasta). Arquivos em public/ são copiados como
+// estão para o build final, por isso as imagens do conteúdo ficam lá e não
+// em src/.
 
 export const siteContent = {
   brand: {
     name: 'SOS Falcon',
     fullName: 'SOS Falcon Soluções Ambientais',
-    logo: 'images/logo.svg',
+    logo: 'images/logo.jpg',
   },
 
   contact: {
@@ -41,8 +42,8 @@ export const siteContent = {
     ctaPrimaryLabel: 'Solicitar avaliação',
     ctaSecondaryLabel: 'Conheça nossos serviços',
     ctaSecondaryHref: '#servicos',
-    image: 'images/hero.svg',
-    imageAlt: 'Gavião-de-Harris utilizado no manejo biológico de aves, em campo ao entardecer',
+    image: 'images/hero.jpg',
+    imageAlt: 'Gavião-de-Harris pousado em poleiro portátil às margens de um lago, ao entardecer',
   },
 
   trust: [
@@ -71,10 +72,10 @@ export const siteContent = {
       'A SOS Falcon nasceu da união entre falcoaria profissional e engenharia de controle ambiental. Atuamos onde pombos e aves urbanas representam risco sanitário, dano patrimonial ou parada operacional — combinando o instinto natural de aves de rapina treinadas com planejamento técnico, segurança do trabalho e acompanhamento de resultado.',
     secondaryText:
       'Nossa equipe está preparada para operar em campo aberto, unidades fabris, galpões logísticos e coberturas, inclusive em trabalhos com uso de EPI para altura, seguindo os protocolos de segurança de cada ambiente.',
-    image: 'images/about-main.svg',
-    imageAlt: 'Falcoeiro em EPI de altura segurando um gavião-de-Harris em ambiente industrial',
-    secondaryImage: 'images/about-secondary.svg',
-    secondaryImageAlt: 'Gavião-de-Harris em pouso durante operação de campo',
+    image: 'images/about-main.jpg',
+    imageAlt: 'Falcoeiro com cinto de segurança e capacete segurando um gavião-de-Harris dentro de uma planta industrial',
+    secondaryImage: 'images/about-secondary.jpg',
+    secondaryImageAlt: 'Gavião-de-Harris olhando diretamente para a câmera, ao amanhecer, em área arborizada',
   },
 
   services: [
@@ -82,29 +83,29 @@ export const siteContent = {
       title: 'Controle de Pombos por Falcoaria',
       description:
         'Redução da presença de pombos urbanos por meio da presença controlada de aves de rapina treinadas, alterando o comportamento das aves-praga sem uso de métodos letais.',
-      image: 'images/service-falcoaria.svg',
-      imageAlt: 'Gavião-de-Harris em atuação de controle de pombos',
+      image: 'images/service-falcoaria.jpg',
+      imageAlt: 'Gavião-de-Harris encapuzado sendo conduzido em linha de produção industrial',
     },
     {
       title: 'Manejo de Aves Urbanas',
       description:
         'Planejamento técnico para áreas com infestação recorrente, considerando rotas de deslocamento, pontos de pouso e origem da atração das aves.',
-      image: 'images/service-manejo.svg',
-      imageAlt: 'Ave de rapina utilizada em manejo de fauna urbana',
+      image: 'images/service-manejo.jpg',
+      imageAlt: 'Gavião-de-Harris pousado em galho de árvore junto a edificação industrial urbana',
     },
     {
       title: 'Avaliação Técnica de Área',
       description:
         'Diagnóstico do espaço, identificação de riscos sanitários e estruturais, e recomendação da estratégia mais adequada para cada ambiente.',
-      image: 'images/service-avaliacao.svg',
-      imageAlt: 'Avaliação técnica de área para controle de fauna',
+      image: 'images/service-avaliacao.jpg',
+      imageAlt: 'Gavião-de-Harris em avaliação de área junto a galpão industrial',
     },
     {
       title: 'Atuação em Ambientes Industriais e em Altura',
       description:
         'Equipe preparada para operar dentro de plantas industriais, galpões logísticos e coberturas, com uso de EPI e conformidade aos protocolos de segurança do trabalho.',
-      image: 'images/service-altura.svg',
-      imageAlt: 'Falcoeiro com equipamento de segurança para trabalho em altura',
+      image: 'images/service-altura.jpg',
+      imageAlt: 'Falcoeiro com cinto de segurança, capacete e EPI completo para trabalho em altura',
     },
   ],
 
@@ -137,19 +138,43 @@ export const siteContent = {
   ],
 
   gallery: [
-    { image: 'images/gallery-1.svg', alt: 'Gavião-de-Harris em campo aberto', caption: 'Campo aberto' },
-    { image: 'images/gallery-2.svg', alt: 'Atuação em galpão logístico', caption: 'Galpão logístico' },
-    { image: 'images/gallery-3.svg', alt: 'Atuação em linha de produção industrial', caption: 'Linha de produção' },
-    { image: 'images/gallery-4.svg', alt: 'Operação noturna de manejo de aves', caption: 'Operação noturna' },
-    { image: 'images/gallery-5.svg', alt: 'Falcoeiro em trabalho de altura com EPI', caption: 'Trabalho em altura' },
-    { image: 'images/gallery-6.svg', alt: 'Retrato do gavião-de-Harris', caption: 'Nossa equipe em campo' },
+    {
+      image: 'images/gallery-1.jpg',
+      alt: 'Gavião-de-Harris sobre porta-paletes em galpão logístico',
+      caption: 'Galpão logístico',
+    },
+    {
+      image: 'images/gallery-2.jpg',
+      alt: 'Gavião-de-Harris no interior de um galpão industrial com estrutura de telhado em madeira',
+      caption: 'Ambiente industrial',
+    },
+    {
+      image: 'images/gallery-3.jpg',
+      alt: 'Gavião-de-Harris em operação noturna próximo a área urbana',
+      caption: 'Operação noturna',
+    },
+    {
+      image: 'images/gallery-4.jpg',
+      alt: 'Gavião-de-Harris concentrado durante operação noturna',
+      caption: 'Concentração em campo',
+    },
+    {
+      image: 'images/gallery-5.jpg',
+      alt: 'Gavião-de-Harris no perímetro de uma área industrial urbana',
+      caption: 'Perímetro urbano',
+    },
+    {
+      image: 'images/gallery-6.jpg',
+      alt: 'Retrato do gavião-de-Harris da nossa equipe',
+      caption: 'Nossa equipe em campo',
+    },
   ],
 
   cta: {
     title: 'Tem um problema com pombos na sua planta ou galpão?',
     description: 'Vamos avaliar a melhor solução técnica para o seu espaço.',
     buttonLabel: 'Solicitar avaliação pelo WhatsApp',
-    image: 'images/cta-bg.svg',
+    image: 'images/cta-bg.jpg',
   },
 
   footer: {
