@@ -6,8 +6,10 @@ const TABS = [
   { id: 'geral', label: 'Geral' },
   { id: 'hero', label: 'Hero' },
   { id: 'sobre', label: 'Sobre' },
+  { id: 'certificacoes', label: 'Certificações' },
   { id: 'servicos', label: 'Serviços' },
   { id: 'galeria', label: 'Galeria' },
+  { id: 'faq', label: 'FAQ' },
   { id: 'cta', label: 'CTA' },
 ]
 
@@ -145,6 +147,38 @@ export function Admin() {
         alt: 'Nova imagem da galeria',
         caption: 'Nova imagem',
       })
+      return next
+    })
+  }
+
+  const addFaqItem = () => {
+    setDraft((prev) => {
+      const next = structuredClone(prev)
+      next.faq.items.push({ question: 'Nova pergunta', answer: 'Nova resposta' })
+      return next
+    })
+  }
+
+  const updateFaqItem = (index, field, value) => {
+    setDraft((prev) => {
+      const next = structuredClone(prev)
+      next.faq.items[index][field] = value
+      return next
+    })
+  }
+
+  const removeFaqItem = (index) => {
+    setDraft((prev) => {
+      const next = structuredClone(prev)
+      next.faq.items.splice(index, 1)
+      return next
+    })
+  }
+
+  const updateCertificationItem = (index, field, value) => {
+    setDraft((prev) => {
+      const next = structuredClone(prev)
+      next.certifications.items[index][field] = value
       return next
     })
   }
@@ -340,6 +374,45 @@ export function Admin() {
           </div>
         )}
 
+        {activeTab === 'certificacoes' && (
+          <div className="admin__panel">
+            <h2>Conformidade e certificações</h2>
+            <div className="admin__grid">
+              <TextField
+                label="Eyebrow"
+                value={draft.certifications.eyebrow}
+                onChange={(v) => updateDraft(['certifications', 'eyebrow'], v)}
+              />
+              <TextField
+                label="Título"
+                value={draft.certifications.title}
+                onChange={(v) => updateDraft(['certifications', 'title'], v)}
+              />
+              <TextField
+                label="Descrição"
+                value={draft.certifications.description}
+                onChange={(v) => updateDraft(['certifications', 'description'], v)}
+                textarea
+              />
+            </div>
+            {draft.certifications.items.map((item, index) => (
+              <div className="admin__list-item" key={index}>
+                <TextField
+                  label="Selo (ex.: CTF/IBAMA)"
+                  value={item.label}
+                  onChange={(v) => updateCertificationItem(index, 'label', v)}
+                />
+                <TextField
+                  label="Descrição"
+                  value={item.description}
+                  onChange={(v) => updateCertificationItem(index, 'description', v)}
+                  textarea
+                />
+              </div>
+            ))}
+          </div>
+        )}
+
         {activeTab === 'servicos' && (
           <div className="admin__panel">
             <h2>Serviços</h2>
@@ -393,6 +466,37 @@ export function Admin() {
             ))}
             <button type="button" className="btn btn-outline--dark" onClick={addGalleryItem}>
               + Adicionar imagem
+            </button>
+          </div>
+        )}
+
+        {activeTab === 'faq' && (
+          <div className="admin__panel">
+            <h2>Perguntas frequentes</h2>
+            <div className="admin__grid">
+              <TextField label="Eyebrow" value={draft.faq.eyebrow} onChange={(v) => updateDraft(['faq', 'eyebrow'], v)} />
+              <TextField label="Título" value={draft.faq.title} onChange={(v) => updateDraft(['faq', 'title'], v)} />
+            </div>
+            {draft.faq.items.map((item, index) => (
+              <div className="admin__list-item" key={index}>
+                <button type="button" className="admin__list-item-remove" onClick={() => removeFaqItem(index)}>
+                  Remover
+                </button>
+                <TextField
+                  label="Pergunta"
+                  value={item.question}
+                  onChange={(v) => updateFaqItem(index, 'question', v)}
+                />
+                <TextField
+                  label="Resposta"
+                  value={item.answer}
+                  onChange={(v) => updateFaqItem(index, 'answer', v)}
+                  textarea
+                />
+              </div>
+            ))}
+            <button type="button" className="btn btn-outline--dark" onClick={addFaqItem}>
+              + Adicionar pergunta
             </button>
           </div>
         )}
