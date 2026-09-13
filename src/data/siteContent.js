@@ -2,12 +2,13 @@
 // pode editar textos, imagens e dados de contato aqui, sem tocar nos
 // componentes React. Veja o README para instruções completas.
 //
-// Caminhos de imagem apontam para public/images/*.jpg — já usam as fotos
-// reais fornecidas pelo cliente. Para trocar uma imagem, basta substituir o
-// arquivo em public/images/ mantendo o mesmo nome (ou apontar para um novo
-// arquivo dentro dessa mesma pasta). Arquivos em public/ são copiados como
-// estão para o build final, por isso as imagens do conteúdo ficam lá e não
-// em src/.
+// Caminhos de imagem apontam para public/images/*.webp — já usam as fotos
+// reais fornecidas pelo cliente, comprimidas em WebP para carregar mais
+// rápido. Para trocar uma imagem, basta substituir o arquivo em
+// public/images/ mantendo o mesmo nome (ou apontar para um novo arquivo
+// dentro dessa mesma pasta — JPG e PNG também funcionam normalmente, WebP
+// não é obrigatório). Arquivos em public/ são copiados como estão para o
+// build final, por isso as imagens do conteúdo ficam lá e não em src/.
 
 export const siteContent = {
   brand: {
@@ -42,7 +43,7 @@ export const siteContent = {
     ctaPrimaryLabel: 'Solicitar avaliação',
     ctaSecondaryLabel: 'Conheça nossos serviços',
     ctaSecondaryHref: '#servicos',
-    image: 'images/hero.jpg',
+    image: 'images/hero.webp',
     imageAlt: 'Gavião-de-Harris pousado em poleiro portátil às margens de um lago, ao entardecer',
   },
 
@@ -72,9 +73,9 @@ export const siteContent = {
       'A SOS Falcon nasceu da união entre falcoaria profissional e engenharia de controle ambiental. Atuamos onde pombos e aves urbanas representam risco sanitário, dano patrimonial ou parada operacional — combinando o instinto natural de aves de rapina treinadas com planejamento técnico, segurança do trabalho e acompanhamento de resultado.',
     secondaryText:
       'Nossa equipe está preparada para operar em campo aberto, unidades fabris, galpões logísticos e coberturas, inclusive em trabalhos com uso de EPI para altura, seguindo os protocolos de segurança de cada ambiente.',
-    image: 'images/about-main.jpg',
+    image: 'images/about-main.webp',
     imageAlt: 'Falcoeiro com cinto de segurança e capacete segurando um gavião-de-Harris dentro de uma planta industrial',
-    secondaryImage: 'images/about-secondary.jpg',
+    secondaryImage: 'images/about-secondary.webp',
     secondaryImageAlt: 'Gavião-de-Harris olhando diretamente para a câmera, ao amanhecer, em área arborizada',
   },
 
@@ -83,28 +84,28 @@ export const siteContent = {
       title: 'Controle de Pombos por Falcoaria',
       description:
         'Redução da presença de pombos urbanos por meio da presença controlada de aves de rapina treinadas, alterando o comportamento das aves-praga sem uso de métodos letais.',
-      image: 'images/service-falcoaria.jpg',
+      image: 'images/service-falcoaria.webp',
       imageAlt: 'Gavião-de-Harris encapuzado sendo conduzido em linha de produção industrial',
     },
     {
       title: 'Manejo de Aves Urbanas',
       description:
         'Planejamento técnico para áreas com infestação recorrente, considerando rotas de deslocamento, pontos de pouso e origem da atração das aves.',
-      image: 'images/service-manejo.jpg',
+      image: 'images/service-manejo.webp',
       imageAlt: 'Gavião-de-Harris pousado em galho de árvore junto a edificação industrial urbana',
     },
     {
       title: 'Avaliação Técnica de Área',
       description:
         'Diagnóstico do espaço, identificação de riscos sanitários e estruturais, e recomendação da estratégia mais adequada para cada ambiente.',
-      image: 'images/service-avaliacao.jpg',
+      image: 'images/service-avaliacao.webp',
       imageAlt: 'Gavião-de-Harris em avaliação de área junto a galpão industrial',
     },
     {
       title: 'Atuação em Ambientes Industriais e em Altura',
       description:
         'Equipe preparada para operar dentro de plantas industriais, galpões logísticos e coberturas, com uso de EPI e conformidade aos protocolos de segurança do trabalho.',
-      image: 'images/service-altura.jpg',
+      image: 'images/service-altura.webp',
       imageAlt: 'Falcoeiro com cinto de segurança, capacete e EPI completo para trabalho em altura',
     },
   ],
@@ -139,32 +140,32 @@ export const siteContent = {
 
   gallery: [
     {
-      image: 'images/gallery-1.jpg',
+      image: 'images/gallery-1.webp',
       alt: 'Gavião-de-Harris sobre porta-paletes em galpão logístico',
       caption: 'Galpão logístico',
     },
     {
-      image: 'images/gallery-2.jpg',
+      image: 'images/gallery-2.webp',
       alt: 'Gavião-de-Harris no interior de um galpão industrial com estrutura de telhado em madeira',
       caption: 'Ambiente industrial',
     },
     {
-      image: 'images/gallery-3.jpg',
+      image: 'images/gallery-3.webp',
       alt: 'Gavião-de-Harris em operação noturna próximo a área urbana',
       caption: 'Operação noturna',
     },
     {
-      image: 'images/gallery-4.jpg',
+      image: 'images/gallery-4.webp',
       alt: 'Gavião-de-Harris concentrado durante operação noturna',
       caption: 'Concentração em campo',
     },
     {
-      image: 'images/gallery-5.jpg',
+      image: 'images/gallery-5.webp',
       alt: 'Gavião-de-Harris no perímetro de uma área industrial urbana',
       caption: 'Perímetro urbano',
     },
     {
-      image: 'images/gallery-6.jpg',
+      image: 'images/gallery-6.webp',
       alt: 'Retrato do gavião-de-Harris da nossa equipe',
       caption: 'Nossa equipe em campo',
     },
@@ -174,7 +175,7 @@ export const siteContent = {
     title: 'Tem um problema com pombos na sua planta ou galpão?',
     description: 'Vamos avaliar a melhor solução técnica para o seu espaço.',
     buttonLabel: 'Solicitar avaliação pelo WhatsApp',
-    image: 'images/cta-bg.jpg',
+    image: 'images/cta-bg.webp',
   },
 
   footer: {

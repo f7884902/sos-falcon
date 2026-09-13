@@ -73,6 +73,10 @@ Detalhes técnicos já resolvidos para você:
   de caminho — não há necessidade de configuração adicional de servidor.
 - `public/404.html` redireciona qualquer URL não encontrada de volta para a
   home, como camada extra de segurança.
+- `public/sitemap.xml` e a linha `Sitemap:` em `public/robots.txt` têm a URL
+  do site (`https://f7884902.github.io/sos-falcon/`) fixada no arquivo. Se um
+  dia vocês configurarem um domínio próprio, atualize essa URL nos dois
+  arquivos.
 
 ## 5. Onde alterar os textos
 
