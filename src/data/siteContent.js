@@ -32,6 +32,7 @@ export const siteContent = {
     { label: 'Serviços', href: '#servicos' },
     { label: 'Como Funciona', href: '#como-funciona' },
     { label: 'Galeria', href: '#galeria' },
+    { label: 'FAQ', href: '#faq' },
     { label: 'Contato', href: '#contato' },
   ],
 
@@ -77,6 +78,36 @@ export const siteContent = {
     imageAlt: 'Falcoeiro com cinto de segurança e capacete segurando um gavião-de-Harris dentro de uma planta industrial',
     secondaryImage: 'images/about-secondary.webp',
     secondaryImageAlt: 'Gavião-de-Harris olhando diretamente para a câmera, ao amanhecer, em área arborizada',
+  },
+
+  certifications: {
+    eyebrow: 'Regularização',
+    title: 'Conformidade e segurança',
+    description:
+      'Atuamos dentro dos padrões legais e técnicos exigidos para manejo de fauna silvestre no Brasil.',
+    items: [
+      {
+        label: 'CTF/IBAMA',
+        description:
+          // ATENÇÃO: preencher com o número real de registro da SOS Falcon
+          // no Cadastro Técnico Federal (CTF) do IBAMA antes de publicar.
+          // Nunca inventar ou copiar o número de outra empresa.
+          'Registro ativo no Cadastro Técnico Federal de Atividades Potencialmente Poluidoras (IBAMA) nº [inserir número de registro].',
+      },
+      {
+        label: 'CFMV nº 1000/2012',
+        description:
+          'Atividades conduzidas em conformidade com a Resolução CFMV nº 1000/2012, que regula o manejo de fauna silvestre.',
+      },
+      {
+        label: 'NR-35',
+        description: 'Equipe certificada em NR-35 para trabalho seguro em altura.',
+      },
+      {
+        label: 'NR-06',
+        description: 'Uso de Equipamentos de Proteção Individual (EPI) conforme a NR-06.',
+      },
+    ],
   },
 
   services: [
@@ -170,6 +201,42 @@ export const siteContent = {
       caption: 'Nossa equipe em campo',
     },
   ],
+
+  faq: {
+    eyebrow: 'Perguntas frequentes',
+    title: 'Tire suas dúvidas sobre o serviço',
+    items: [
+      {
+        question: 'O método de falcoaria machuca os pombos?',
+        answer:
+          'Não. A ave de rapina atua como um predador natural presente no território, o que faz com que os pombos evitem a área por instinto — sem contato físico ou uso de métodos letais.',
+      },
+      {
+        question: 'Quanto tempo leva para ver resultado?',
+        answer:
+          'Varia conforme o tamanho e a complexidade do local. Em geral, já é possível notar redução da presença das aves nas primeiras semanas, com resultado consolidado ao longo do acompanhamento recorrente.',
+      },
+      {
+        question: 'É necessário interromper as atividades do local durante o atendimento?',
+        answer:
+          'Não. O serviço é planejado para acontecer junto da operação normal do espaço, inclusive em plantas industriais e galpões em funcionamento.',
+      },
+      {
+        question: 'O contrato é pontual ou recorrente?',
+        answer:
+          'Os dois modelos existem. Fazemos desde uma avaliação e intervenção pontual até contratos recorrentes, dependendo do nível de infestação e das necessidades do espaço.',
+      },
+      {
+        question: 'Preciso de autorização ambiental própria para contratar o serviço?',
+        answer:
+          'Não. A SOS Falcon possui registro no CTF/IBAMA e atua em conformidade com a Resolução CFMV nº 1000/2012, o que cobre a regularização necessária para a atividade.',
+      },
+      {
+        question: 'Quais regiões vocês atendem?',
+        answer: 'Atendimento em todo o Brasil — consulte disponibilidade para o seu município.',
+      },
+    ],
+  },
 
   cta: {
     title: 'Tem um problema com pombos na sua planta ou galpão?',
