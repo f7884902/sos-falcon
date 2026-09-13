@@ -13,7 +13,7 @@ export const siteContent = {
   brand: {
     name: 'SOS Falcon',
     fullName: 'SOS Falcon Soluções Ambientais',
-    logo: 'images/logo.jpg',
+    logo: 'images/logo.png',
   },
 
   contact: {

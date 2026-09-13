@@ -10,8 +10,9 @@
 }
 
 .footer__brand img {
-  height: 36px;
-  margin-bottom: var(--space-sm);
+  height: 68px;
+  width: auto;
+  margin-bottom: var(--space-md);
 }
 
 .footer__brand p {
