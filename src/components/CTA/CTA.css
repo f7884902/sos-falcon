@@ -1,0 +1,52 @@
+.cta {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  margin: 0 var(--space-md);
+  padding: var(--space-2xl) var(--space-md);
+  text-align: center;
+  isolation: isolate;
+}
+
+.cta__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.cta__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(6, 25, 18, 0.92), rgba(11, 42, 30, 0.82));
+  z-index: -1;
+}
+
+.cta__content {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--color-text-inverse);
+}
+
+.cta__content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.cta__content p {
+  margin-top: var(--space-sm);
+  color: rgba(245, 244, 240, 0.82);
+  font-size: 1.05rem;
+}
+
+.cta__content .btn {
+  margin-top: var(--space-lg);
+}
+
+@media (max-width: 640px) {
+  .cta {
+    margin: 0 var(--space-sm);
+    padding: var(--space-xl) var(--space-sm);
+  }
+}

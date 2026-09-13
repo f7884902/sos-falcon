@@ -1,0 +1,126 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--color-primary-dark);
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  transform: scale(1.02) translateY(var(--hero-shift, 0px));
+  transition: transform 60ms linear;
+  will-change: transform;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 25, 18, 0.75) 0%,
+    rgba(6, 25, 18, 0.35) 40%,
+    rgba(6, 25, 18, 0.55) 75%,
+    rgba(6, 25, 18, 0.92) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  padding-bottom: var(--space-2xl);
+  width: 100%;
+}
+
+.hero__eyebrow {
+  color: var(--color-secondary);
+}
+
+.hero__title {
+  font-size: clamp(2.4rem, 6vw, 4.5rem);
+  color: var(--color-text-inverse);
+  max-width: 18ch;
+}
+
+.hero__subtitle {
+  margin-top: var(--space-md);
+  max-width: 52ch;
+  font-size: 1.15rem;
+  color: rgba(245, 244, 240, 0.85);
+}
+
+.hero__actions {
+  margin-top: var(--space-lg);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(245, 244, 240, 0.7);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero__scroll-indicator span.line {
+  width: 1px;
+  height: 34px;
+  background: rgba(245, 244, 240, 0.5);
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%,
+  100% {
+    transform: scaleY(0.6);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__image {
+    transform: none !important;
+  }
+
+  .hero__scroll-indicator span.line {
+    animation: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    align-items: center;
+  }
+
+  .hero__content {
+    padding-bottom: 0;
+  }
+
+  .hero__scroll-indicator {
+    display: none;
+  }
+}

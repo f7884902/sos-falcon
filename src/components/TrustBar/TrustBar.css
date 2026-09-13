@@ -1,0 +1,38 @@
+.trust-bar {
+  background: var(--color-primary);
+  padding: var(--space-xl) 0;
+}
+
+.trust-bar__grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+.trust-bar__item {
+  border-top: 1px solid var(--color-border-inverse);
+  padding-top: var(--space-md);
+}
+
+.trust-bar__item h3 {
+  font-size: 1.05rem;
+  color: var(--color-text-inverse);
+  margin-bottom: 0.5rem;
+}
+
+.trust-bar__item p {
+  color: rgba(245, 244, 240, 0.72);
+  font-size: 0.95rem;
+}
+
+@media (min-width: 640px) {
+  .trust-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .trust-bar__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

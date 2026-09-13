@@ -1,0 +1,45 @@
+:root {
+  /* Cores — derivadas da logo (verde profundo + prata metálico) e da
+     plumagem do gavião-de-harris (acento terroso) */
+  --color-primary: #0b2a1e;
+  --color-primary-light: #163d2b;
+  --color-primary-dark: #061912;
+  --color-secondary: #c9cdd1;
+  --color-accent: #a15f30;
+  --color-accent-light: #c17a45;
+  --color-background: #0a0a0b;
+  --color-surface: #f5f4f0;
+  --color-surface-alt: #ece9e2;
+  --color-text: #14181a;
+  --color-text-inverse: #f5f4f0;
+  --color-muted: #6b7280;
+  --color-border: rgba(20, 24, 26, 0.1);
+  --color-border-inverse: rgba(245, 244, 240, 0.16);
+
+  /* Tipografia */
+  --font-heading: 'Space Grotesk', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Espaçamento */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 9rem;
+
+  /* Layout */
+  --container-max: 1280px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+
+  /* Movimento */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 200ms;
+  --duration-base: 500ms;
+  --duration-slow: 1200ms;
+
+  --header-height: 84px;
+}
