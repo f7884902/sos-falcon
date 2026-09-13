@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#0B2A1E"/>
+  <rect x="24" y="24" width="752" height="552" fill="none" stroke="#C9CDD1" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="400" y="300" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#F5F4F0" text-anchor="middle">IMAGEM PLACEHOLDER</text>
+  <text x="400" y="334" font-family="Arial, sans-serif" font-size="13" fill="#8a9089" text-anchor="middle">substituir em public/images/</text>
+</svg>
