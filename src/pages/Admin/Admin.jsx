@@ -13,6 +13,12 @@ const TABS = [
 
 const SESSION_KEY = 'sosfalcon:admin-session'
 
+// Lida de VITE_ADMIN_PASSWORD (arquivo .env, não versionado — veja .env.example
+// e o README). Como este é um site estático sem backend, essa variável é
+// embutida no JavaScript público no momento do build: NÃO é um segredo real,
+// apenas evita deixar a senha escrita diretamente no código-fonte versionado.
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || 'sosfalcon2024'
+
 function ImageField({ label, value, onChange }) {
   const handleFile = (event) => {
     const file = event.target.files?.[0]
@@ -43,13 +49,13 @@ function TextField({ label, value, onChange, textarea }) {
   )
 }
 
-function LoginGate({ content, onSuccess }) {
+function LoginGate({ onSuccess }) {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    if (password === content.admin.accessPassword) {
+    if (password === ADMIN_PASSWORD) {
       window.sessionStorage.setItem(SESSION_KEY, '1')
       onSuccess()
     } else {
@@ -62,10 +68,12 @@ function LoginGate({ content, onSuccess }) {
       <form className="admin__login-card" onSubmit={handleSubmit}>
         <h1>Painel Administrativo</h1>
         <p>
-          Esta senha é apenas uma barreira de interface, definida em{' '}
-          <code>src/data/siteContent.js</code>. Ela <strong>não</strong> é um mecanismo de
-          autenticação seguro — qualquer pessoa com acesso ao código-fonte pode vê-la. Não a
-          utilize para proteger informação sensível.
+          Esta senha é apenas uma barreira de interface, definida na variável{' '}
+          <code>VITE_ADMIN_PASSWORD</code> (arquivo <code>.env</code>, veja{' '}
+          <code>.env.example</code>). Ela <strong>não</strong> é um mecanismo de autenticação
+          seguro — como o site é 100% estático, o valor fica embutido no JavaScript público
+          gerado no build, e qualquer pessoa pode extraí-lo inspecionando o site. Não a utilize
+          para proteger informação sensível.
         </p>
         <div className="admin__field">
           <label htmlFor="admin-password">Senha de acesso</label>
@@ -98,7 +106,7 @@ export function Admin() {
   const hasUnsavedChanges = useMemo(() => JSON.stringify(draft) !== JSON.stringify(content), [draft, content])
 
   if (!isAuthenticated) {
-    return <LoginGate content={content} onSuccess={() => setIsAuthenticated(true)} />
+    return <LoginGate onSuccess={() => setIsAuthenticated(true)} />
   }
 
   const updateDraft = (path, value) => {

@@ -157,11 +157,4 @@ export const siteContent = {
       'Controle biológico de pombos e aves urbanas com falcoaria técnica, para ambientes que exigem uma solução séria e eficaz.',
     copyright: `© ${new Date().getFullYear()} SOS Falcon Soluções Ambientais. Todos os direitos reservados.`,
   },
-
-  admin: {
-    // Aviso: esta senha é apenas uma barreira de interface para o painel
-    // /admin, NÃO é autenticação segura. Veja o README, seção "Segurança
-    // do painel administrativo".
-    accessPassword: 'sosfalcon2024',
-  },
 }

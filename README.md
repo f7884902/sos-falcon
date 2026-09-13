@@ -99,9 +99,14 @@ Elas são referenciadas em `src/data/siteContent.js` por caminho, por exemplo:
 
 ```js
 hero: {
-  image: '/images/hero.svg',
+  image: 'images/hero.svg',
 }
 ```
+
+> O caminho é relativo (sem `/` na frente) de propósito: como o site pode ser
+> publicado em um subcaminho (ex.: `usuario.github.io/nome-do-repo/`), um
+> caminho começando com `/` apontaria para a raiz do domínio e quebraria as
+> imagens em produção.
 
 Para trocar uma imagem:
 
@@ -124,9 +129,26 @@ antes de publicar definitivamente.
 ## 7. Como usar o painel de edição (/admin)
 
 Acesse `http://localhost:5173/#/admin` (em produção,
-`https://seu-dominio/#/admin`). A senha padrão é `sosfalcon2024`, definida em
-`src/data/siteContent.js` (`admin.accessPassword`) — altere-a para o valor que
-preferir.
+`https://seu-dominio/#/admin`).
+
+A senha é definida pela variável de ambiente `VITE_ADMIN_PASSWORD`, em um
+arquivo `.env` na raiz do projeto (não versionado no Git). Para configurar:
+
+```bash
+cp .env.example .env
+```
+
+E edite o valor de `VITE_ADMIN_PASSWORD` no `.env`. Se nenhum `.env` existir,
+o site usa a senha padrão `sosfalcon2024` como fallback.
+
+> **Atenção:** como o site é 100% estático (sem backend), o valor de
+> `VITE_ADMIN_PASSWORD` fica **embutido no JavaScript público** no momento do
+> build (`npm run build` / `npm run deploy`) — não é um segredo real, apenas
+> evita deixar a senha escrita diretamente no código-fonte versionado. Além
+> disso, como o `gh-pages` publica o resultado do build feito na sua própria
+> máquina, **quem rodar `npm run deploy` precisa ter o `.env` com a senha
+> desejada presente localmente antes de rodar o comando** — não existe um
+> "servidor" remoto que leia esse arquivo depois.
 
 O painel permite editar, com preview imediato no próprio navegador:
 
